@@ -1,17 +1,21 @@
-const name = 'Max';
-let age = 29;
-const hasHobby = true;
-
-age = 30;
-
-const summarizeUser = (userName, userAge, userHasHobby) => {
-    return ('Name is ' + userName + ', age is ' + userAge + ' and the user has hobbies: ' + userHasHobby);
+const person = {
+    name: 'Max',
+    age: 29,
+    greet() {
+        console.log('who are noobs ' + this.name);
+    }
 };
 
-const add = (a, b) => a + b;
-const addOne = a => a + 1;
-const addRandom = () => 1 + 2;
+person.greet();
 
-console.log(addRandom());
+const hobbies = ['nothing', 'bitch', 4, true, {}];
+for (let hobby of hobbies) {
+    console.log(hobby);
+}
 
-console.log(summarizeUser(name, age, hasHobby));
+console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+
+const copiedHobbies = [...hobbies];
+copiedHobbies.push('sracka');
+console.log(copiedHobbies);
+console.log(hobbies);
