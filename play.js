@@ -6,22 +6,8 @@ const person = {
     }
 };
 
-person.greet();
-
-const hobbies = ['nothing', 'bitch', 4, true, {}];
-for (let hobby of hobbies) {
-    console.log(hobby);
+const printName = ({name}) => {
+    console.log(name);
 }
 
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
-
-const copiedHobbies = [...hobbies];
-copiedHobbies.push('sracka');
-console.log(copiedHobbies);
-console.log(hobbies);
-
-const toArray = (...args) => {
-    return args;
-}
-
-console.log(toArray(1,2,3));
+printName(person);
