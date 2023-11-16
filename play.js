@@ -11,3 +11,12 @@ const printName = ({name}) => {
 }
 
 printName(person);
+
+const {name, age} = person;
+console.log(name);
+console.log(age);
+console.log(person);
+
+const c = ['vole', 'smrdis'];
+const [a, b] = c;
+console.log(a,b);
