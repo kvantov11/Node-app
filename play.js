@@ -1,22 +1,14 @@
-const person = {
-    name: 'Max',
-    age: 29,
-    greet() {
-        console.log('who are noobs ' + this.name);
-    }
-};
-
-const printName = ({name}) => {
-    console.log(name);
+const fetchData = callback => {
+    setTimeout(() => {
+        callback('done');
+    }, 1500);
 }
 
-printName(person);
+setTimeout(() => {
+    console.log('timer is done');
+    fetchData(text => {
+        console.log(text + 1);
+    })
+}, 2000);
 
-const {name, age} = person;
-console.log(name);
-console.log(age);
-console.log(person);
-
-const c = ['vole', 'smrdis'];
-const [a, b] = c;
-console.log(a,b);
+console.log('motha');
