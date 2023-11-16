@@ -19,3 +19,9 @@ const copiedHobbies = [...hobbies];
 copiedHobbies.push('sracka');
 console.log(copiedHobbies);
 console.log(hobbies);
+
+const toArray = (...args) => {
+    return args;
+}
+
+console.log(toArray(1,2,3));
